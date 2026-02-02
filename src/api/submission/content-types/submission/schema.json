@@ -29,8 +29,7 @@
     "author": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "submissions"
+      "target": "plugin::users-permissions.user"
     },
     "lastSaved": {
       "type": "datetime"
