@@ -22,7 +22,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["draft", "submitted", "under_review", "approved", "published", "rejected"],
+      "enum": ["draft", "submitted", "under_review", "accepted", "revision_requested", "published", "rejected"],
       "default": "draft",
       "required": true
     },
@@ -30,6 +30,14 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "reviewedBy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "feedback": {
+      "type": "text"
     },
     "lastSaved": {
       "type": "datetime"
